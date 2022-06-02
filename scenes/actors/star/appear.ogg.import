@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/appear.ogg-540b5458213a6897a7b2c14d632994fb.oggstr"
+
+[deps]
+
+source_file="res://scenes/actors/star/appear.ogg"
+dest_files=[ "res://.import/appear.ogg-540b5458213a6897a7b2c14d632994fb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

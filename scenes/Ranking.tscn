@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/briefs/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/Ranking.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=355]
+outline_size = 1
+outline_color = Color( 0.133333, 0.192157, 0.384314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=356]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.378929, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -288 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Ranking" type="CanvasLayer"]
+pause_mode = 2
+layer = 111
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_top = -288.0
+margin_right = 40.0
+margin_bottom = -248.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_right = 512.0
+margin_bottom = 288.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+margin_top = 13.0
+margin_right = 512.0
+margin_bottom = 53.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 355 )
+bbcode_enabled = true
+bbcode_text = "[center]Level complete![/center]"
+text = "Level complete!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_top = 12.0
+margin_right = 512.0
+margin_bottom = 52.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 355 )
+bbcode_enabled = true
+bbcode_text = "[center]Level complete![/center]"
+text = "Level complete!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controls" type="RichTextLabel" parent="Control"]
+margin_top = 256.0
+margin_right = 512.0
+margin_bottom = 296.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 355 )
+bbcode_enabled = true
+bbcode_text = "[center][ENTER]: Continue   [R]: Retry[/center]"
+text = "[ENTER]: Continue   [R]: Retry"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/in = SubResource( 356 )

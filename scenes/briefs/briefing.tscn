@@ -1,0 +1,171 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/briefs/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/briefs/art.png" type="Texture" id=2]
+[ext_resource path="res://scenes/briefs/text_sound.ogg" type="AudioStream" id=3]
+[ext_resource path="res://scenes/briefs/typing.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0.133333, 0.192157, 0.384314, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 311.0
+margin_top = 57.0
+margin_right = 468.0
+margin_bottom = 289.0
+rect_clip_content = false
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 311.0
+margin_top = 56.0
+margin_right = 468.0
+margin_bottom = 288.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day2" type="RichTextLabel" parent="."]
+margin_left = 299.0
+margin_top = 25.0
+margin_right = 456.0
+margin_bottom = 257.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Day 1"
+text = "Day 1"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day" type="RichTextLabel" parent="."]
+margin_left = 299.0
+margin_top = 24.0
+margin_right = 456.0
+margin_bottom = 256.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Day 1"
+text = "Day 1"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ENTER2" type="RichTextLabel" parent="."]
+margin_left = 311.0
+margin_top = 264.0
+margin_right = 468.0
+margin_bottom = 288.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]-Press [ENTER] to continue-[/center]"
+text = "-Press [ENTER] to continue-"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ENTER" type="RichTextLabel" parent="."]
+margin_left = 311.0
+margin_top = 263.0
+margin_right = 468.0
+margin_bottom = 287.0
+rect_clip_content = false
+custom_colors/default_color = Color( 0, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]-Press [ENTER] to continue-[/center]"
+text = "-Press [ENTER] to continue-"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 3.0
+bus = "Sounds"
+
+[node name="Briefing1" type="RichTextLabel" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_enabled = true
+bbcode_text = "Bloody hell, the king already wants me to pick up the pace on weapons for his airships instead of working on my previous project. Well, some other mook from this idiotic science department can take care of that rubbish! I'm not giving up on my precious little war machine...
+
+Time to take you out for a spin, Undersion MKII."
+text = "Bloody hell, the king already wants me to pick up the pace on weapons for his airships instead of working on my previous project. Well, some other mook from this idiotic science department can take care of that rubbish! I'm not giving up on my precious little war machine...
+
+Time to take you out for a spin, Undersion MKII."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Briefing2" type="RichTextLabel" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_enabled = true
+bbcode_text = "What in the world do these fungi man-children think they're doing on my private island?! Did I not release a Green Demon here to take care of unruly creatures?
+
+If they won't perish, I'll make them."
+text = "What in the world do these fungi man-children think they're doing on my private island?! Did I not release a Green Demon here to take care of unruly creatures?
+
+If they won't perish, I'll make them."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Briefing3" type="RichTextLabel" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_enabled = true
+bbcode_text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+text = "Oh no, no, NO! The Mushroom Kingdom engineered the Green Demons to obey them and protect the Toads?  What do they think they're attempting to do with these glorious creatures?
+
+If this was all intentionally done to halt my plans, well, this goes to show how small the kingdom's brains are."
+__meta__ = {
+"_edit_use_anchors_": false
+}

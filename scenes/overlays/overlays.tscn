@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 color_tint : hint_color;
+uniform float mix_amount = 1.4;
+
+void fragment() {
+	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV, 0.0);
+	
+	color = mix(color, color_tint, 0.4);
+	color.rgb = mix(vec3(0.5), color.rgb, mix_amount);
+	
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/color_tint = Color( 0.231373, 0.247059, 0.768627, 1 )
+shader_param/mix_amount = 1.4
+
+[node name="Overlays" type="CanvasLayer"]
+layer = 70
+
+[node name="WaterTint" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_right = 416.0
+margin_bottom = 234.0
+rect_scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

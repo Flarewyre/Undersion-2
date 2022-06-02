@@ -1,0 +1,239 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/briefs/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/actors/coin/coin.png" type="Texture" id=2]
+[ext_resource path="res://scenes/actors/toad/head.png" type="Texture" id=3]
+[ext_resource path="res://scenes/actors/energy/energy.png" type="Texture" id=4]
+[ext_resource path="res://scenes/ui.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0.133333, 0.192157, 0.384314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 24, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 72, 0, 24, 24 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 9.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 10, 10 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 10, 0, 10, 10 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 20, 0, 10, 10 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 30, 0, 10, 10 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 9.0
+} ]
+
+[node name="UI" type="CanvasLayer"]
+layer = 110
+script = ExtResource( 5 )
+
+[node name="CoinUI" type="Control" parent="."]
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 44.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value2" type="RichTextLabel" parent="CoinUI"]
+margin_left = 24.0
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 45.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0/4"
+text = "0/4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="RichTextLabel" parent="CoinUI"]
+margin_left = 24.0
+margin_top = 4.0
+margin_right = 64.0
+margin_bottom = 44.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0/4"
+text = "0/4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CoinUI"]
+frames = SubResource( 6 )
+frame = 2
+playing = true
+centered = false
+offset = Vector2( 0, -2 )
+
+[node name="ToadUI" type="Control" parent="."]
+margin_left = 56.0
+margin_top = 8.0
+margin_right = 96.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value2" type="RichTextLabel" parent="ToadUI"]
+margin_left = 26.0
+margin_top = 5.0
+margin_right = 66.0
+margin_bottom = 45.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0/4"
+text = "0/4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="RichTextLabel" parent="ToadUI"]
+margin_left = 26.0
+margin_top = 4.0
+margin_right = 66.0
+margin_bottom = 44.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0/4"
+text = "0/4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ToadUI"]
+frames = SubResource( 7 )
+playing = true
+centered = false
+
+[node name="EnergyUI" type="Control" parent="."]
+margin_left = 109.0
+margin_top = 8.0
+margin_right = 149.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value2" type="RichTextLabel" parent="EnergyUI"]
+margin_left = 16.0
+margin_top = 5.0
+margin_right = 56.0
+margin_bottom = 45.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="RichTextLabel" parent="EnergyUI"]
+margin_left = 16.0
+margin_top = 4.0
+margin_right = 56.0
+margin_bottom = 44.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "0"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="EnergyUI"]
+frames = SubResource( 12 )
+frame = 1
+playing = true
+centered = false
+offset = Vector2( 0, 6 )
+
+[node name="Timer" type="Control" parent="."]
+margin_left = 448.0
+margin_top = 8.0
+margin_right = 488.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value2" type="RichTextLabel" parent="Timer"]
+margin_left = -48.0
+margin_top = 5.0
+margin_right = 56.0
+margin_bottom = 45.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[right]00:00.00[/right]"
+text = "00:00.00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="RichTextLabel" parent="Timer"]
+margin_left = -48.0
+margin_top = 4.0
+margin_right = 56.0
+margin_bottom = 44.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[right]00:00.00[/right]"
+text = "00:00.00"
+__meta__ = {
+"_edit_use_anchors_": false
+}

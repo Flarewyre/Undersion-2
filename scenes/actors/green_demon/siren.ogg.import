@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/siren.ogg-49225e34c691045d83a0e2c9122a83fa.oggstr"
+
+[deps]
+
+source_file="res://scenes/actors/green_demon/siren.ogg"
+dest_files=[ "res://.import/siren.ogg-49225e34c691045d83a0e2c9122a83fa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0.238
